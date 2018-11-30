@@ -3,6 +3,7 @@ import logging
 import sys
 import datetime
 import certstream
+from similarweb import TrafficClient
 
 certstream_url = 'wss://certstream.calidog.io'
 
@@ -20,16 +21,17 @@ def checkHTTPS(url):
 def verif_whois(url):
     return
 
-def verif_frequence(url):
-    return
+def analyseVisite(url):
+    traffic_client = TrafficClient("your_api_key")
+    traffic_client.visits("google.fr")
+
+analyseVisite("salut")
 
 def verif_herbergeur_geoloc(url):
     return
 
 def filtre():
     return
-
-verif_confiance("salut")
 
 def print_callback(message, context):
     logging.debug("Message -> {}".format(message))
