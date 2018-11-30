@@ -6,10 +6,15 @@ import certstream
 
 certstream_url = 'wss://certstream.calidog.io'
 
-def verif_confiance(url):
-    return
+def trustedSite(url):
+    with open("listeReduite.txt") as f:
+        mylist = f.read().splitlines()
+    if url in mylist:
+        return "Site OK : " + url
+    else:
+        return checkHTTPS(url)
 
-def verif_https(url):
+def checkHTTPS(url):
     return
 
 def verif_whois(url):
@@ -23,6 +28,8 @@ def verif_herbergeur_geoloc(url):
 
 def filtre():
     return
+
+verif_confiance("salut")
 
 def print_callback(message, context):
     logging.debug("Message -> {}".format(message))
