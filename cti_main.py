@@ -3,7 +3,7 @@ import logging
 import sys
 import datetime
 import certstream
-from similarweb import TrafficClient
+import requests
 
 certstream_url = 'wss://certstream.calidog.io'
 
@@ -22,10 +22,20 @@ def verif_whois(url):
     return
 
 def analyseVisite(url):
-    traffic_client = TrafficClient("your_api_key")
-    traffic_client.visits("google.fr")
-
-analyseVisite("salut")
+    r = requests.get("https://www.alexa.com/siteinfo/" + url)
+    page = str(r.text)
+    if 'We don\'t have enough data to rank this website.' in page:
+        print("Aucune donnée sur ce domaine.")
+        return -1
+    else:
+        #page = str(r.text).split("demographics_div_country_table")[1].split("data-count")[1].split("&nbsp;")[1].split("</a>")[0]
+        globalRank = page.split("<!-- Alexa web traffic metrics are available via our API at http://aws.amazon.com/awis -->\n")[1].split(' ')[0]
+        country = page.split("countryRank")[2].split("title=\'")[1].split("\'")[0]
+        countryRank = page.split("metrics-data align-vmiddle\">\n")[2].split(" ")[0]
+        print("Rang mondial : " + globalRank)
+        print("Pays : " + country)
+        print("Rang dans le pays : " + countryRank)
+        return 0
 
 def verif_herbergeur_geoloc(url):
     return
