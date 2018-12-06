@@ -16,12 +16,23 @@ def trustedSite(url):
         return checkHTTPS(url)
 
 def checkHTTPS(url):
-    return
+    print("####### CHECK HTTPS #######\n")
+    try:
+        requests.get("https://" + url, verify=True)
+        print("SSL GOOD CERTIFICATE DOMAIN")
+        print("####### CHECK HTTPS #######\n")
+        return analyseVisite(url)
+    except Exception:
+        print("####### CHECK HTTPS #######\n")
+        print("SSL ERROR BAD CERTIFICATE DOMAIN")
+        print("Pas ok")
+        print("####### CHECK HTTPS #######\n")
 
 def verif_whois(url):
     return
 
 def analyseVisite(url):
+    print("####### ANALYSE VISITE #######\n")
     r = requests.get("https://www.alexa.com/siteinfo/" + url)
     page = str(r.text)
     if 'We don\'t have enough data to rank this website.' in page:
@@ -43,24 +54,32 @@ def verif_herbergeur_geoloc(url):
 def filtre():
     return
 
+def traitementURL(domain):
+    motcle =  ["banque", "credit", "agricole", "mutuel", "lcl.", "lyonnais", "bforbank", "hellobank", "bank", "caisse", "epargne", "hsbc", "fortuneo", "axa.", "groupama",
+               "allianz", "barclays", "postale", "societegeneral", "boursorama", "paribas", "swisslife", "ubs.", "cetelem", "banq",
+               "monabanq", "cic.", "banca", "creval","carige","banco","abnamro", "vanlanschot", "pekao", "pkobp","millenniumbcp","montepio",
+               "standardchartered","santander", "nationwide","nordea","skandia", ]
+    for mot in motcle:
+        if mot in domain:
+            sys.stdout.write(u"[{}] {} \n".format(datetime.datetime.now().strftime('%m/%d/%y %H:%M:%S'), domain))
+            sys.stdout.flush()
+    print("####### TRAITEMENT URL #######\n")
+    return trustedSite(domain)
+
+
 def print_callback(message, context):
     logging.debug("Message -> {}".format(message))
-
     if message['message_type'] == "heartbeat":
         return
-
     if message['message_type'] == "certificate_update":
         all_domains = message['data']['leaf_cert']['all_domains']
-
-        if len(all_domains) == 0:
-            domain = "NULL"
-        else:
-            domain = all_domains[0]
-
-        sys.stdout.write(u"[{}] {} (SAN: {})\n".format(datetime.datetime.now().strftime('%m/%d/%y %H:%M:%S'), domain, ", ".join(message['data']['leaf_cert']['all_domains'][1:])))
-        sys.stdout.flush()
+    if len(all_domains) == 0:
+        domain = "NULL"
+    else:
+        domain = all_domains[0]
+        print(domain)
+        traitementURL(domain)
 
 logging.basicConfig(format='[%(levelname)s:%(name)s] %(asctime)s - %(message)s', level=logging.INFO)
-
 certstream.listen_for_events(print_callback, url=certstream_url)
 
