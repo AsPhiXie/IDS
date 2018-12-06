@@ -6,32 +6,35 @@ import certstream
 import requests
 
 certstream_url = 'wss://certstream.calidog.io'
+score = 100
 
 def trustedSite(url):
+    global score
     with open("listeReduite.txt") as f:
         mylist = f.read().splitlines()
     if url in mylist:
+        print("Score = 100/100")
         return "Site OK : " + url
     else:
+        score = score - 50
         return checkHTTPS(url)
 
 def checkHTTPS(url):
-    print("####### CHECK HTTPS #######\n")
+    global score
     try:
         requests.get("https://" + url, verify=True)
-        print("SSL GOOD CERTIFICATE DOMAIN")
-        print("####### CHECK HTTPS #######\n")
+        #print("SSL GOOD CERTIFICATE DOMAIN")
         return analyseVisite(url)
     except Exception:
-        print("SSL ERROR BAD CERTIFICATE DOMAIN")
-        print("Pas ok")
-        print("####### CHECK HTTPS #######\n")
+        #print("SSL ERROR BAD CERTIFICATE DOMAIN")
+        score = score - 50
+        print("Site non accepté. URL = " + url)
+        print("Score = " + str(score))
 
 def verif_whois(url):
     return
 
 def analyseVisite(url):
-    print("####### ANALYSE VISITE #######\n")
     r = requests.get("https://www.alexa.com/siteinfo/" + url)
     page = str(r.text)
     if 'We don\'t have enough data to rank this website.' in page:
@@ -62,11 +65,11 @@ def traitementURL(domain):
         if mot in domain:
             sys.stdout.write(u"[{}] {} \n".format(datetime.datetime.now().strftime('%m/%d/%y %H:%M:%S'), domain))
             sys.stdout.flush()
-    print("####### TRAITEMENT URL #######\n")
     return trustedSite(domain)
 
 
 def print_callback(message, context):
+    global score
     logging.debug("Message -> {}".format(message))
     if message['message_type'] == "heartbeat":
         return
@@ -77,6 +80,7 @@ def print_callback(message, context):
     else:
         domain = all_domains[0]
         print(domain)
+        score = 100
         traitementURL(domain)
 
 logging.basicConfig(format='[%(levelname)s:%(name)s] %(asctime)s - %(message)s', level=logging.INFO)
