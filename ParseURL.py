@@ -23,7 +23,8 @@ def traitementURL(domain):
     motcle =  ["banque", "credit", "agricole", "mutuel", "lcl.", "lyonnais", "bforbank", "hellobank", "bank", "caisse", "epargne", "hsbc", "fortuneo", "axa.", "groupama",
                "allianz", "barclays", "postale", "societegeneral", "boursorama", "paribas", "swisslife", "ubs.", "cetelem", "banq",
                "monabanq", "cic.", "banca", "creval","carige","banco","abnamro", "vanlanschot", "pekao", "pkobp","millenniumbcp","montepio",
-               "standardchartered","santander", "nationwide","nordea","skandia", ]
+               "standardchartered","santander", "nationwide","nordea","skandia", "juliusbaer", "itau", "bradesco", "banrisul", "goldmansachs",
+               "morganstanley", "citigroup", "jpmorganchase", "wellsfargo", "capitalone", "meriwest", ]
     for mot in motcle:
         if mot in domain:
             sys.stdout.write(u"[{}] {} \n".format(datetime.datetime.now().strftime('%m/%d/%y %H:%M:%S'), domain))
