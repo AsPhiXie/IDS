@@ -31,8 +31,6 @@ def checkHTTPS(url):
         i = STIX2(url, score, "Site sans certificat SSL.")
         print(i)
         return
-        #print("Site non accepté. URL = " + url)
-        #print("Score = " + str(score))
 
 def verif_whois(url):
     return
@@ -42,17 +40,16 @@ def analyseVisite(url):
     r = requests.get("https://www.alexa.com/siteinfo/" + url)
     page = str(r.text)
     if 'We don\'t have enough data to rank this website.' in page:
-        score = score - 50
-        #print("Aucune donnée sur ce domaine.")
+        score = score - 40
+
         i = STIX2(url, score, "Pas de donnee Alexa.")
         print(i)
         return
     else:
-        #page = str(r.text).split("demographics_div_country_table")[1].split("data-count")[1].split("&nbsp;")[1].split("</a>")[0]
         globalRank = page.split("<!-- Alexa web traffic metrics are available via our API at http://aws.amazon.com/awis -->\n")[1].split(' ')[0]
         country = page.split("countryRank")[2].split("title=\'")[1].split("\'")[0]
         countryRank = page.split("metrics-data align-vmiddle\">\n")[2].split(" ")[0]
-        #print("Rang mondial : " + globalRank)
+
         intGLobal = int(globalRank)
         if (intGLobal > 4000000):
             score -= 40
