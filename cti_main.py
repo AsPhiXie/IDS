@@ -23,7 +23,6 @@ def checkHTTPS(url):
         print("####### CHECK HTTPS #######\n")
         return analyseVisite(url)
     except Exception:
-        print("####### CHECK HTTPS #######\n")
         print("SSL ERROR BAD CERTIFICATE DOMAIN")
         print("Pas ok")
         print("####### CHECK HTTPS #######\n")
