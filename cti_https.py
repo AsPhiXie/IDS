@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import socket
 import ssl
 import OpenSSL
@@ -11,7 +13,8 @@ if len(sys.argv) < 2:
     print("Error, argument required")
     exit(-1)
 
-HOST = sys.argv[1]
+NAME = sys.argv[1]
+HOST = socket.gethostbyname(NAME.split("//")[1])
 PORT = 443
 
 # cert = ssl.get_server_certificate((HOST, PORT))
@@ -27,8 +30,8 @@ PORT = 443
 
 # catcher d'autres exceptions
 try:
-    r = requests.get(HOST, verify=True)
-    print(r)
+    r = requests.get(NAME, verify=True)
+    print("SSL GOOD CERTIFICATE DOMAIN")
 except requests.exceptions.SSLError:
     print("SSL ERROR BAD CERTIFICATE DOMAIN")
 
