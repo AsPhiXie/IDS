@@ -112,10 +112,10 @@ def verif_whois(url):
     if domain.name_servers:
         for server in domain.name_servers:
             if server in bl_dns:
-                score -= -50
+                score -= 50
                 creerStix(url, score, "Le serveur : "+ server +" est liste dans la blackliste")
     else:
-        score -= -50
+        score -= 50
         creerStix(url, score, "Pas de serveur de nom dans le whois")
 
     if (td - cd).days < 365:
