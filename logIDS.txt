@@ -1,0 +1,409 @@
+{
+    "type": "indicator",
+    "pattern": "[url:value = 'vocationsbleues-cic.com']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:34:22.948297Z",
+    "name": "URL Suspecte",
+    "id": "indicator--0377e676-1236-492e-98a6-689d6f647f09",
+    "modified": "2018-12-07T20:34:22.948Z",
+    "created": "2018-12-07T21:34:22.948Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'vscreditconsultant.com']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:35:12.957096Z",
+    "name": "URL Suspecte",
+    "id": "indicator--71df06d9-2ddf-4faa-888a-57c8fd26e92b",
+    "modified": "2018-12-07T20:35:12.957Z",
+    "created": "2018-12-07T21:35:12.957Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'utilitycreditos.com']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:35:18.971157Z",
+    "name": "URL Suspecte",
+    "id": "indicator--765774f6-9b4d-451a-ab5e-b6abdb98969b",
+    "modified": "2018-12-07T20:35:18.971Z",
+    "created": "2018-12-07T21:35:18.971Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'essaybank.ukessays.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:37:26.54236Z",
+    "name": "URL Suspecte",
+    "id": "indicator--c1c43b96-0472-4239-a5b3-ff4f52b02bfc",
+    "modified": "2018-12-07T20:37:26.542Z",
+    "created": "2018-12-07T21:37:26.542Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'cpanel.healthbanktips.com']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:37:56.309948Z",
+    "name": "URL Suspecte",
+    "id": "indicator--e2114b73-11cc-4a9b-a943-c1a2447e962b",
+    "modified": "2018-12-07T20:37:56.309Z",
+    "created": "2018-12-07T21:37:56.309Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'www.onlyforbanking.com']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:38:27.967381Z",
+    "name": "URL Suspecte",
+    "id": "indicator--6711367c-b40f-452e-b4a3-ec20361789d8",
+    "modified": "2018-12-07T20:38:27.967Z",
+    "created": "2018-12-07T21:38:27.967Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'nationalbankholdings.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:38:35.504467Z",
+    "name": "URL Suspecte",
+    "id": "indicator--50d992e9-dfb8-4582-8f51-2d1a998b211a",
+    "modified": "2018-12-07T20:38:35.504Z",
+    "created": "2018-12-07T21:38:35.504Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'lacompagniedesbanquets.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:40:37.922867Z",
+    "name": "URL Suspecte",
+    "id": "indicator--43406bfa-c973-4ee8-873f-0495cf75490c",
+    "modified": "2018-12-07T20:40:37.922Z",
+    "created": "2018-12-07T21:40:37.922Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'allianzsp.build.c4lab.sk']",
+    "description": "Score = 0 | Pas de serveur de nom dans le whois",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:40:40.613486Z",
+    "name": "URL Suspecte",
+    "id": "indicator--7009deef-7c10-48cf-915f-e47d22cce511",
+    "modified": "2018-12-07T20:40:40.613Z",
+    "created": "2018-12-07T21:40:40.613Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'allianzsp.build.c4lab.sk']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:40:41.740227Z",
+    "name": "URL Suspecte",
+    "id": "indicator--17a27619-9f12-4740-af84-20e098ee802e",
+    "modified": "2018-12-07T20:40:41.740Z",
+    "created": "2018-12-07T21:40:41.740Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'autodiscover.ebancongress2014.org']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:40:47.550242Z",
+    "name": "URL Suspecte",
+    "id": "indicator--efa24d7c-a6bc-4997-9c8d-927247880786",
+    "modified": "2018-12-07T20:40:47.550Z",
+    "created": "2018-12-07T21:40:47.550Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'lacompagniedesbanquets.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:40:54.706179Z",
+    "name": "URL Suspecte",
+    "id": "indicator--451c8ab6-25a9-4ac5-99b2-7a8b8eb8db5b",
+    "modified": "2018-12-07T20:40:54.706Z",
+    "created": "2018-12-07T21:40:54.706Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'ctoneeuglnutpwt.nationwidetenantscreening.com']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:41:43.691624Z",
+    "name": "URL Suspecte",
+    "id": "indicator--d9a0e921-7ab6-406d-ad39-f75d6ad24b7f",
+    "modified": "2018-12-07T20:41:43.691Z",
+    "created": "2018-12-07T21:41:43.691Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'ctoneeuglnutpwt.nationwidetenantscreening.com']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:41:47.431825Z",
+    "name": "URL Suspecte",
+    "id": "indicator--320ae644-54dc-4e26-8dd7-94f000ee3f78",
+    "modified": "2018-12-07T20:41:47.431Z",
+    "created": "2018-12-07T21:41:47.431Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'labanquepostale.fr.aider003.info']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:42:31.07869Z",
+    "name": "URL Suspecte",
+    "id": "indicator--30abb121-9aed-477e-b867-46735f38957b",
+    "modified": "2018-12-07T20:42:31.078Z",
+    "created": "2018-12-07T21:42:31.078Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'blog.westburybankwi.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:10.137146Z",
+    "name": "URL Suspecte",
+    "id": "indicator--cb7aee31-3e5d-47cd-8a72-cef0b7fb25d9",
+    "modified": "2018-12-07T20:43:10.137Z",
+    "created": "2018-12-07T21:43:10.137Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'salebythebank.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:10.588426Z",
+    "name": "URL Suspecte",
+    "id": "indicator--e552af13-0dfc-4e1f-b958-46e6050f9205",
+    "modified": "2018-12-07T20:43:10.588Z",
+    "created": "2018-12-07T21:43:10.588Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = '*.bestcreditreports.sale']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:21.989829Z",
+    "name": "URL Suspecte",
+    "id": "indicator--76865ddf-1a31-4327-ba40-91b4391fcb4d",
+    "modified": "2018-12-07T20:43:21.989Z",
+    "created": "2018-12-07T21:43:21.989Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'www.sarahmaybank.com']",
+    "description": "Score = 10 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:34.925352Z",
+    "name": "URL Suspecte",
+    "id": "indicator--65751154-7f52-445b-8dc6-7559f756c2f2",
+    "modified": "2018-12-07T20:43:34.925Z",
+    "created": "2018-12-07T21:43:34.925Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'chinafirstbank.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:37.321663Z",
+    "name": "URL Suspecte",
+    "id": "indicator--4b167330-e704-4a3f-afa9-6b7106c6d95c",
+    "modified": "2018-12-07T20:43:37.321Z",
+    "created": "2018-12-07T21:43:37.321Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'www.bankerproducts.shop']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:50.848375Z",
+    "name": "URL Suspecte",
+    "id": "indicator--141b4cb4-9130-472d-836b-28b0cb73c5e2",
+    "modified": "2018-12-07T20:43:50.848Z",
+    "created": "2018-12-07T21:43:50.848Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'unitybanke.pw']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:43:56.433718Z",
+    "name": "URL Suspecte",
+    "id": "indicator--e9223e65-e387-40e1-8cb7-6944ed45f25c",
+    "modified": "2018-12-07T20:43:56.433Z",
+    "created": "2018-12-07T21:43:56.433Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'unitybanke.pw']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:44:00.967883Z",
+    "name": "URL Suspecte",
+    "id": "indicator--8a3d5f34-8262-4024-9476-0028ab9a8310",
+    "modified": "2018-12-07T20:44:00.967Z",
+    "created": "2018-12-07T21:44:00.967Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'findbankruptcyhelpnow.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:44:03.620628Z",
+    "name": "URL Suspecte",
+    "id": "indicator--9dae25ff-ced3-431a-9676-5af985dd5426",
+    "modified": "2018-12-07T20:44:03.620Z",
+    "created": "2018-12-07T21:44:03.620Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'wiganworkshopcic.com']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:44:10.601561Z",
+    "name": "URL Suspecte",
+    "id": "indicator--2b2ccc1e-0475-4d3d-a002-88a6dd6b9aad",
+    "modified": "2018-12-07T20:44:10.601Z",
+    "created": "2018-12-07T21:44:10.601Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'cpanel.taichinhvpbank.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:44:23.046836Z",
+    "name": "URL Suspecte",
+    "id": "indicator--a6df5036-c465-44ce-a8c5-663e91ed8335",
+    "modified": "2018-12-07T20:44:23.046Z",
+    "created": "2018-12-07T21:44:23.046Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'banketperm.ru']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:45:34.184684Z",
+    "name": "URL Suspecte",
+    "id": "indicator--057150f6-733d-4450-b708-0317e87c88bd",
+    "modified": "2018-12-07T20:45:34.184Z",
+    "created": "2018-12-07T21:45:34.184Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'e-halkbankyeniyilkampanyasi.com']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:45:50.930102Z",
+    "name": "URL Suspecte",
+    "id": "indicator--fa3d4927-93ff-4fef-b7a7-a8360a5161da",
+    "modified": "2018-12-07T20:45:50.930Z",
+    "created": "2018-12-07T21:45:50.929Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'actuatorsuburbanqfg.ml']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:45:51.479547Z",
+    "name": "URL Suspecte",
+    "id": "indicator--13250c6d-8fe1-40dd-92b5-5b6be5ee6b46",
+    "modified": "2018-12-07T20:45:51.479Z",
+    "created": "2018-12-07T21:45:51.479Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'saviorcredits.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:45:56.225559Z",
+    "name": "URL Suspecte",
+    "id": "indicator--f8a2e1c1-2b61-48e4-a520-c024bdca0653",
+    "modified": "2018-12-07T20:45:56.225Z",
+    "created": "2018-12-07T21:45:56.225Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'login.unitybanke.pw']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:46:04.612375Z",
+    "name": "URL Suspecte",
+    "id": "indicator--f07253bf-7ca1-4578-847c-cecb1a757e8a",
+    "modified": "2018-12-07T20:46:04.612Z",
+    "created": "2018-12-07T21:46:04.612Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'sadsdasdasds.pubs.staging.stoplight-dev.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:46:09.345394Z",
+    "name": "URL Suspecte",
+    "id": "indicator--dcbbd5c0-efc1-4791-aa57-c65db28d59a1",
+    "modified": "2018-12-07T20:46:09.345Z",
+    "created": "2018-12-07T21:46:09.345Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'login.unitybanke.pw']",
+    "description": "Score = 0 | Pas de donnee Alexa.",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:46:12.723749Z",
+    "name": "URL Suspecte",
+    "id": "indicator--eddff053-fcdb-4749-b2ee-b84fe3a2f8b1",
+    "modified": "2018-12-07T20:46:12.723Z",
+    "created": "2018-12-07T21:46:12.723Z"
+}{
+    "type": "indicator",
+    "pattern": "[url:value = 'sooftbank.com']",
+    "description": "Score = 0 | Certificat SSL non valide",
+    "labels": [
+        "malicious-activity"
+    ],
+    "valid_from": "2018-12-07T20:46:13.170373Z",
+    "name": "URL Suspecte",
+    "id": "indicator--45caa35f-ab3f-4dca-870e-492ea4116620",
+    "modified": "2018-12-07T20:46:13.170Z",
+    "created": "2018-12-07T21:46:13.170Z"
+}
