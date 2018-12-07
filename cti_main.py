@@ -89,24 +89,34 @@ def checkHTTPS(url):
     except Exception as e:
         #print("SSL ERROR BAD CERTIFICATE DOMAIN")
         score = score - 50
-        i = STIX2(url, score, str(e))
-        print(i)
+        creerStix(url, score, "Certificat SSL non valide")
         return
+
+def creerStix(url, score, description):
+    i=STIX2(url, max(score, 0), description)
+    print("here")
+    print(i)
+    ecrireDansFichier(i)
+
+def ecrireDansFichier(indicator):
+    file = open("logIDS.txt", "a")
+    file.write(indicator.serialize(indent=4))
+    file.close()
 
 def verif_whois(url):
     global score
     domain = whois.whois(url)
-    cd = domain.creation_date
+    cd = domain.creation_date or datetime.datetime.now()
     td = datetime.datetime.now()
 
     if domain.name_servers:
         for server in domain.name_servers:
             if server in bl_dns:
                 score -= -50
-                return
+                creerStix(url, score, "Le serveur : "+ server +" est liste dans la blackliste")
     else:
         score -= -50
-        return
+        creerStix(url, score, "Pas de serveur de nom dans le whois")
 
     if (td - cd).days < 365:
         score -= 25
@@ -120,8 +130,7 @@ def analyseVisite(url):
     if 'We don\'t have enough data to rank this website.' in page:
         score = score - 40
 
-        i = STIX2(url, score, "Pas de donnee Alexa.")
-        print(i)
+        creerStix(url, score, "Pas de donnee Alexa.")
         return
     else:
         globalRank = page.split("<!-- Alexa web traffic metrics are available via our API at http://aws.amazon.com/awis -->\n")[1].split(' ')[0]
@@ -137,8 +146,7 @@ def analyseVisite(url):
             score -= 20
         elif (intGLobal > 1000000):
             score -= 10
-        i = STIX2(url, score, "Rang mondiale = " + globalRank)
-        print(i)
+        creerStix(url, score, "Rang mondiale = " + globalRank)
         return
 
 def traitementURL(domain):
