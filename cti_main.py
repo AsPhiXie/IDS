@@ -1,10 +1,10 @@
 # coding: utf-8
 import logging
 import datetime
-import certstream
+import certstream # pip3 install certstream
 import requests
-from stix2 import Indicator
-import whois
+from stix2 import Indicator # pip3 install stix2
+import whois # pip3 install python-whois
 import datetime
 
 certstream_url = 'wss://certstream.calidog.io'
@@ -86,23 +86,27 @@ def checkHTTPS(url):
         requests.get("https://" + url, verify=True)
         #print("SSL GOOD CERTIFICATE DOMAIN")
         return verif_whois(url)
-    except Exception:
+    except Exception as e:
         #print("SSL ERROR BAD CERTIFICATE DOMAIN")
         score = score - 50
-        i = STIX2(url, score, "Site sans certificat SSL.")
+        i = STIX2(url, score, str(e))
         print(i)
         return
 
 def verif_whois(url):
     global score
-    domain = whois.whois(NAME)
+    domain = whois.whois(url)
     cd = domain.creation_date
     td = datetime.datetime.now()
 
-    for server in domain.name_servers:
-        if server in bl_dns:
-            score -= -50
-            return
+    if domain.name_servers:
+        for server in domain.name_servers:
+            if server in bl_dns:
+                score -= -50
+                return
+    else:
+        score -= -50
+        return
 
     if (td - cd).days < 365:
         score -= 25
