@@ -123,6 +123,11 @@ def verif_whois(url):
 
     return analyseVisite(url)
 
+def appendUrlDansFichier(url):
+    file = open("URLaRegarder", "a")
+    file.write(url)
+    file.close()
+
 def analyseVisite(url):
     global score
     r = requests.get("https://www.alexa.com/siteinfo/" + url)
@@ -146,7 +151,11 @@ def analyseVisite(url):
             score -= 20
         elif (intGLobal > 1000000):
             score -= 10
-        creerStix(url, score, "Rang mondiale = " + globalRank)
+
+        if score ==50:
+            appendUrlDansFichier(url)
+        else:
+            creerStix(url, score, "Rang mondiale = " + globalRank)
         return
 
 def traitementURL(domain):
